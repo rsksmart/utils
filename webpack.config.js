@@ -3,7 +3,7 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
     entry: "./rsk-conversion-utils.js",
     output: {
-        path: './build/lib',
+        path: __dirname + '/build/lib',
 		filename: 'rsk-conversion-utils.js',
 		libraryTarget: 'var',
 		library: 'RSKUtils'
