@@ -2,7 +2,7 @@ require("json-loader")
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
     entry: "./rsk-conversion-utils.js",
-    mode: 'production',
+    mode: 'development',
     output: {
         path: __dirname + '/build/lib',
 	filename: 'rsk-conversion-utils.js',
