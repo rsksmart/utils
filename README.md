@@ -6,8 +6,10 @@
 
 - Install NPM:	https://docs.npmjs.com/cli/install
 
-- Install Webpack: $ npm install webpack -g
-		
+- Install Webpack: $ npm install -g webpack@latest 
+
+- Install Webpack-cli: $ npm install -g webpack-cli@latest 
+
 - Run: $ npm install
 
 - Run: $ webpack
