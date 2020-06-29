@@ -4,20 +4,19 @@
   "version": "1.0.0",
   "description": "bitcoin-to-rsk-key-utils",
   "main": "bitcoin-to-rsk-key-utils.js",
-  "scripts": {
-  },
+  "scripts": {},
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "ethereumjs-wallet": "latest",
+    "ethereumjs-wallet": "^1.0.0",
     "bs58": "3.0.0",
-	  "json-loader": "latest",
-	  "jquery" : "latest",
-	  "copy-webpack-plugin" : "latest",
-    "convert-hex" : "latest",
-    "js-sha256" : "latest"
+    "json-loader": "^0.5.7",
+    "jquery": "^3.5.1",
+    "copy-webpack-plugin": "^6.0.2",
+    "convert-hex": "^0.1.0",
+    "js-sha256": "^0.9.0"
   },
   "devDependencies": {
-    "simpleunit": "0.0.7"
+    "simpleunit": "^0.0.8"
   }
 }

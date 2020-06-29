@@ -1,5 +1,5 @@
 var bs58 = require('bs58');
-var wallet = require('ethereumjs-wallet');
+var wallet = require('ethereumjs-wallet').default;
 var convertHex = require('convert-hex');
 var sha256 = require('js-sha256');
 

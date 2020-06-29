@@ -1,5 +1,5 @@
-require("json-loader")
-var CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
+
 module.exports = {
     entry: "./rsk-conversion-utils.js",
     output: {
@@ -9,18 +9,20 @@ module.exports = {
 		library: 'RSKUtils'
     },
     module: {
-        loaders: [
-            { test: /\.css$/, loader: "style!css" },
-			{ test: /\.json$/, loader: "json-loader" }
+        rules: [
+            { test: /\.css$/, loader: 'css-loader' },
+            { test: /\.css$/, loader: "style!css" }	
         ]
     },
 	plugins: [
-        new CopyWebpackPlugin([
-            { from: './index.html', to: '../index.html' },
-			{ from: './lib/jquery-3.1.1.min.js' },
-			{ from: './rsk-helper.js' },
-			{ from: './css', to: '../css'},
-            { from: './img', to: '../img'}
-		])
-	]
+        new CopyPlugin({
+            patterns: [
+                { from: './index.html', to: '../index.html' },
+			    { from: './lib/jquery-3.1.1.min.js' },
+			    { from: './rsk-helper.js' },
+			    { from: './css', to: '../css'},
+                { from: './img', to: '../img'}
+            ],
+        }),
+	],
 };
