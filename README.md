@@ -1,18 +1,21 @@
-# rsk-utils
+# Rsk Conversion Utils
+
 RSK Utils to convert keys from BTC to RSK
 
+## How to run the application?
 
-# How to build the browser application.
+- Install dependencies: `npm install`
 
-- Install NPM:	https://docs.npmjs.com/cli/install
+- `npm run serve`.
 
-- Install Webpack: $ npm install webpack -g
-		
-- Run: $ npm install
+- App will be live on [http://localhost:1234](http://localhost:1234)
 
-- Run: $ webpack
+## Download release
 
-- A new "build" folder is created after previous step is executed, in the folder, you would find the the browser app ready to go, just open index.html
+Instead of running the app you can also open release build file.
 
+- Download build file [build.zip](https://github.com/rsksmart/utils/releases)
+
+- Unzip the dist file and open `index.html` in your browser.
 
 **This small application runs within the browser, no call to the server is made. So you can run it off-line.**

@@ -1,0 +1,189 @@
+$rsk-green: #01c926;
+$light: #eee;
+$black-alpha: rgba(0, 0, 0, 0.2);
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+::selection {
+  background-color: $rsk-green;
+  color: white;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+main {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: $light;
+}
+
+section {
+  flex: 1;
+  display: flex;
+}
+
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  flex: 1;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-evenly;
+}
+
+.card {
+  padding: 2rem;
+  border: 1px solid $black-alpha;
+  border-radius: 5px;
+
+  &-header {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: $rsk-green;
+  }
+}
+
+.fields {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+
+  & > *:nth-child(n + 2) {
+    margin-left: 1rem;
+  }
+}
+
+.form-field {
+  flex: 1;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: black;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+
+  & a {
+    color: white;
+    padding: 0.5rem;
+  }
+
+  & a:hover {
+    color: $rsk-green;
+  }
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+input {
+  width: 100%;
+}
+
+select {
+  appearance: none;
+}
+
+input,
+select {
+  border-color: $black-alpha;
+  border-width: 1px;
+  border-style: solid;
+
+  &:focus {
+    outline-color: $rsk-green;
+  }
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: $rsk-green;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+
+  &:hover {
+    background-color: darken($rsk-green, 5%);
+  }
+
+  &:active {
+    background-color: $rsk-green;
+  }
+}
+
+input,
+select,
+button {
+  padding: 0.875rem 1rem;
+  border-radius: 5px;
+}
+
+.error {
+  color: red;
+  margin-top: 0.5rem;
+}
+
+.result {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 1rem;
+  background-color: $light;
+  border: 1px solid $black-alpha;
+  border-radius: 5px;
+  overflow-x: auto;
+
+  & > div {
+    margin-top: 0.5rem;
+  }
+
+  & pre {
+    display: inline-block;
+    background-color: white;
+    padding: 5px 10px;
+  }
+}
