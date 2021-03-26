@@ -1,22 +1,28 @@
 {
   "name": "bitcoin-to-rsk-key-utils",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "bitcoin-to-rsk-key-utils",
   "main": "bitcoin-to-rsk-key-utils.js",
-  "scripts": {},
+  "scripts": {
+    "serve": "parcel serve src/index.pug",
+    "build": "parcel build --public-url ./ --out-dir build src/index.pug",
+    "format": "prettier --write '**/*.{pug,scss,html,ts}'"
+  },
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "ethereumjs-wallet": "^1.0.0",
-    "bs58": "3.0.0",
-    "json-loader": "^0.5.7",
-    "jquery": "^3.5.1",
-    "copy-webpack-plugin": "^6.0.2",
-    "convert-hex": "^0.1.0",
+    "bs58": "^4.0.1",
+    "ethereumjs-wallet": "^1.0.1",
     "js-sha256": "^0.9.0"
   },
   "devDependencies": {
-    "simpleunit": "^0.0.8"
+    "@prettier/plugin-pug": "^1.13.5",
+    "@types/bs58": "^4.0.1",
+    "parcel-bundler": "^1.12.5",
+    "prettier": "^2.2.1",
+    "pug": "^3.0.2",
+    "sass": "^1.32.8",
+    "typescript": "^4.2.3"
   }
 }
