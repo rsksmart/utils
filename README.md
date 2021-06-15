@@ -1,6 +1,14 @@
 # rsk-utils
 RSK Utils to convert keys from BTC to RSK
 
+# How to use the browser application.
+
+- Run: $ git clone https://github.com/rsksmart/utils
+
+- Open the index.html
+
+**After cloning the repository you can go off-line.**
+
 
 # How to build the browser application.
 
