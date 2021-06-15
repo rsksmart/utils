@@ -6,7 +6,9 @@ RSK Utils to convert keys from BTC to RSK
 
 - Install NPM:	https://docs.npmjs.com/cli/install
 
-- Install Webpack: $ npm install webpack -g
+- Install Webpack: $ npm install webpack@4.46.0 -g
+
+- Install Webpack-cli: $ npm i webpack-cli@3.3.12 -g
 		
 - Run: $ npm install
 
