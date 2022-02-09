@@ -1,7 +1,8 @@
 const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-    entry: "./rsk-conversion-utils.js",
+    entry: './rsk-conversion-utils.js',
+    mode: 'production',
     output: {
         path: __dirname + '/build/lib',
 		filename: 'rsk-conversion-utils.js',
@@ -10,8 +11,8 @@ module.exports = {
     },
     module: {
         rules: [
-            { test: /\.css$/, loader: 'css-loader' },
-            { test: /\.css$/, loader: "style!css" }	
+            { test: /\.css$/, use: ['css-loader'] },
+            { test: /\.css$/, use: ['style', 'css'] }	
         ]
     },
 	plugins: [

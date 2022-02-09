@@ -8,15 +8,18 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "ethereumjs-wallet": "^1.0.0",
     "bs58": "3.0.0",
-    "json-loader": "^0.5.7",
-    "jquery": "^3.5.1",
-    "copy-webpack-plugin": "^6.0.2",
     "convert-hex": "^0.1.0",
-    "js-sha256": "^0.9.0"
+    "copy-webpack-plugin": "^6.0.2",
+    "ethereumjs-wallet": "^1.0.0",
+    "jquery": "^3.5.1",
+    "js-sha256": "^0.9.0",
+    "json-loader": "^0.5.7"
   },
   "devDependencies": {
-    "simpleunit": "^0.0.8"
+    "assert": "^2.0.0",
+    "buffer": "^6.0.3",
+    "simpleunit": "^0.0.8",
+    "stream": "^0.0.2"
   }
 }
