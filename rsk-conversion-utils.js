@@ -5,7 +5,8 @@ var sha256 = require('js-sha256');
 
 function keyBtcToRskInBytes(privKeyAsExportedByBitcoinDumpprivkey) {
     var decodedKey = bs58.decode(privKeyAsExportedByBitcoinDumpprivkey);
-    var privKeyBytes = decodedKey.slice(1, decodedKey.length - 5);
+    var checksumLength = privKeyAsExportedByBitcoinDumpprivkey.length === 52 ? 5 : 4;
+    var privKeyBytes = decodedKey.slice(1, decodedKey.length - checksumLength);
     return privKeyBytes;
 }
 
@@ -43,7 +44,7 @@ function getBtcPrivateKey(btcNet, rskAddress) {
 	for (var i = 0;  i < 4; i++) {
 		result.push(check[i]);
 	}
-	
+
 	return bs58.encode(result);
 }
 
